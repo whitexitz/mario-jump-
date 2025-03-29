@@ -1,32 +1,43 @@
-*{
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #87CEEB; /* Adicionado um fundo azul claro para simular o céu */
+  overflow: hidden; /* Evita barras de rolagem desnecessárias */
 }
 
 .game-board {
-    width: 80%;
-    height: 500px;
-    border: 1px solid #333;
-    margin: 0 auto;
-    overflow: hidden;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #333; /* Cor de fundo do jogo, ajuste conforme necessário */
 }
 
-
 .pipe {
-    position: absolute;
-    botton: 0;
-    width: 20px;
-    animation: pipe-animation 2s;
+  position: absolute;
+  width: 80px;
+  height: 100px; /* Ajuste a altura do cano conforme necessário */
+  bottom: 0;
+  background-color: green; /* Cor do cano, ajuste conforme necessário */
+  animation: pipe-animation 2s infinite linear;
+}
 
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
 }
 
 @keyframes pipe-animation {
-    from { 
-    right: 0;
-    }
-
+  from {
+      right: 0;
+  }
   to {
-    right: 100%;
-  }  
+      right: 100%;
+  }
 }
