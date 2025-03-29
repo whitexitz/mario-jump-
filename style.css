@@ -9,4 +9,24 @@
     height: 500px;
     border: 1px solid #333;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.pipe {
+    position: absolute;
+    botton: 0;
+    width: 20px;
+    animation: pipe-animation 2s;
+
+}
+
+@keyframes pipe-animation {
+    from { 
+    right: 0;
+    }
+
+  to {
+    right: 100%;
+  }  
 }
